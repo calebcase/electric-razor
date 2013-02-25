@@ -1,0 +1,41 @@
+{
+  "project_page": "https://github.com/puppetlabs/puppet-dhcp",
+  "license": "Apache License Version 2.0",
+  "checksums": {
+    "tests/init.pp": "61e295c72a3806e1af23eb53b41e0888",
+    "manifests/pool.pp": "d340f505e1ffe31f1e2fc4c50b836824",
+    "templates/dhcpd.conf.failover.erb": "dacbce523af9511ccf15b950ab84248f",
+    "templates/dhcpd.conf-extra.erb": "d5c0666a46a544af2d0c6f936ee159b7",
+    "templates/dhcpd.conf.ddns.erb": "d5e255e5ebdad371b310e9e2cd342658",
+    "README.md": "b77ea0f195087b66582d03778b481399",
+    "manifests/host.pp": "5b5ec4f00b156bb07c226381f33db8f9",
+    "manifests/params.pp": "cbacb69f6ae8ed3630ff9cba64c0c5e2",
+    "templates/dhcpd.conf.pxe.erb": "e98bf811d86b6967db17e22d06c2dfc7",
+    "manifests/failover.pp": "c00e32b4019893efcba34971c9bde974",
+    "manifests/monitor.pp": "fbe0e7f0713e23ddf787fed60372a265",
+    "templates/dhcpd.conf-header.erb": "86ce6f524edc448b5a0736ddfed400b5",
+    "files/dhcpd.hosts": "f3be005eb6404e8e97be43fd63720af4",
+    "manifests/disable.pp": "468e9c6d23638fdb9e7cdf54d51ee755",
+    "templates/dhcpd.host.erb": "328b30ec8ea387512fb25c1282adbe72",
+    "manifests/init.pp": "1e09c8a9e2bcfe5c4e0983fb63326563",
+    "files/dhcpd.pools": "461545f7d46e5dc0e1e6f9bdfad32d1d",
+    "Modulefile": "abb36f7b05c2d06a3616ed5d7bbf37c0",
+    "templates/dhcpd.pool.erb": "8209c02fb07ce06a41d963c49a95c877",
+    "templates/debian/default_isc-dhcp-server": "4c030226107774becb8928809749ebfd"
+  },
+  "source": "git://github.com/puppetlabs/puppetlabs-dhcp.git",
+  "types": [
+
+  ],
+  "dependencies": [
+    {
+      "version_requirement": ">= 0.1.0",
+      "name": "ripienaar/concat"
+    }
+  ],
+  "summary": "Manage the ISC DHCP Daemon",
+  "description": "A Puppet module to deploy and manage the ISC DHCP server.",
+  "name": "puppetlabs-dhcp",
+  "author": "puppetlabs",
+  "version": "0.1.0"
+}

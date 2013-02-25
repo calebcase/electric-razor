@@ -1,0 +1,3 @@
+[submodule "modules/razor"]
+	path = modules/razor
+	url = git://github.com/puppetlabs/puppetlabs-razor.git
