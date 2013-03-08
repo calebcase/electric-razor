@@ -42,8 +42,8 @@ rz_image { 'ubuntu-precise':
   ensure  => present,
   type    => 'os',
   version => '12.04.1',
-  source  => '/vagrant/isos/ubuntu-12.04.1-server-amd64.iso',
-  url     => 'http://releases.ubuntu.com/precise/ubuntu-12.04.1-server-amd64.iso',
+  source  => '/vagrant/isos/ubuntu-12.04.2-server-amd64.iso',
+  url     => 'http://releases.ubuntu.com/precise/ubuntu-12.04.2-server-amd64.iso',
 }
 
 rz_model { 'ubuntu-precise':
