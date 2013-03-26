@@ -36,6 +36,15 @@ class { 'razor':
   require   => Class['sudo'],
 }
 
+# Electric Razor Microkernel
+
+rz_image { 'electric-razor-microkernel':
+  ensure => present,
+  type   => 'mk',
+  source => '/vagrant/isos/electric-razor-microkernel-latest.iso',
+  #url    => 'http://some/place/awesome/electric-razor-microkernel-latest.iso',
+}
+
 # Razor Ubuntu Precise Setup
 
 rz_image { 'ubuntu-precise':
@@ -53,7 +62,7 @@ rz_model { 'ubuntu-precise':
   metadata    => {
     'domainname'      => 'cut.razor.lan',
     'hostname_prefix' => 'ubuntu-precise-',
-    'rootpassword'    => 'electric',
+    'root_password'    => 'electric',
   },
   template    => 'ubuntu_precise',
 }
@@ -62,9 +71,9 @@ rz_tag { 'ubuntu-precise':
   tag_label   => 'ubuntu-precise',
   tag_matcher => [
     {
-      'key'     => 'macaddress_eth0',
+      'key'     => 'vagrant_os',
       'compare' => 'equal',
-      'value'   => '08:00:27:7E:25:02',
+      'value'   => 'ubuntu-precise',
     }
   ],
 }
@@ -95,7 +104,7 @@ rz_model { 'centos-6':
   metadata    => {
     'domainname'      => 'cut.razor.lan',
     'hostname_prefix' => 'centos-6-',
-    'rootpassword'    => 'electric',
+    'root_password'    => 'electric',
   },
   template    => 'centos_6',
 }
@@ -104,9 +113,9 @@ rz_tag { 'centos-6':
   tag_label   => 'centos-6',
   tag_matcher => [
     {
-      'key'     => 'macaddress_eth0',
+      'key'     => 'vagrant_os',
       'compare' => 'equal',
-      'value'   => '08:00:27:7E:25:03',
+      'value'   => 'centos-6',
     }
   ],
 }
